@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 80" width="600" height="80">
+  <!-- Monogram box -->
+  <rect x="4" y="8" width="64" height="64" fill="none" stroke="#1a1a2e" stroke-width="1.2" />
+  <text x="36" y="50" text-anchor="middle" font-family="'Didot', 'Playfair Display', 'Georgia', 'Times New Roman', serif" font-size="30" font-weight="400" fill="#1a1a2e" letter-spacing="2">MXC</text>
+  <!-- Full wordmark beside it -->
+  <text x="92" y="50" text-anchor="start" font-family="'Didot', 'Playfair Display', 'Georgia', 'Times New Roman', serif" font-size="32" font-weight="400" fill="#1a1a2e" letter-spacing="10">MONARCH X CAPITAL</text>
+</svg>

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" width="140" height="140">
+  <!-- MXC Monogram - letters properly contained within frame -->
+  <rect x="10" y="10" width="120" height="120" fill="none" stroke="#f5f0eb" stroke-width="1.5" />
+  <text x="70" y="82" text-anchor="middle" font-family="'Didot', 'Playfair Display', 'Georgia', 'Times New Roman', serif" font-size="40" font-weight="400" fill="#f5f0eb" letter-spacing="6">MXC</text>
+</svg>

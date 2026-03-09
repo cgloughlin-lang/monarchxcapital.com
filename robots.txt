@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://monarchxcapital.com/sitemap.xml
+
+# MonarchX Capital — Embedded Commercial Leadership
+# Enterprise Transformation · PE Portfolio Operations · Growth-Stage Scale
+# monarchxcapital.com

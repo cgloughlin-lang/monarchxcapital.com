@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- MXC Monogram - clean, geometric, lapel-pin ready -->
+  <text x="60" y="72" text-anchor="middle" font-family="'Didot', 'Playfair Display', 'Georgia', 'Times New Roman', serif" font-size="48" font-weight="400" fill="#1a1a2e" letter-spacing="4">MXC</text>
+  <!-- Thin border frame -->
+  <rect x="8" y="16" width="104" height="88" fill="none" stroke="#1a1a2e" stroke-width="1.2" />
+</svg>

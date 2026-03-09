@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 80" width="800" height="80">
+  <text x="295" y="52" text-anchor="end" font-family="'Didot', 'Playfair Display', 'Georgia', 'Times New Roman', serif" font-size="42" font-weight="400" fill="#f5f0eb" letter-spacing="14">MONARCH</text>
+  <line x1="318" y1="18" x2="352" y2="58" stroke="#f5f0eb" stroke-width="1.8" />
+  <line x1="352" y1="18" x2="318" y2="58" stroke="#f5f0eb" stroke-width="1.8" />
+  <text x="375" y="52" text-anchor="start" font-family="'Didot', 'Playfair Display', 'Georgia', 'Times New Roman', serif" font-size="42" font-weight="400" fill="#f5f0eb" letter-spacing="14">CAPITAL</text>
+</svg>
