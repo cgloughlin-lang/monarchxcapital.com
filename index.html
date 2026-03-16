@@ -1552,10 +1552,29 @@
           if (!email) return;
           var btn = document.getElementById('subscribeBtn');
           var note = document.getElementById('subscribeNote');
-          window.location.href = 'mailto:charlotte@monarchxcapital.com?subject=Subscribe%20Request%20-%20MonarchX%20Capital&body=Please%20subscribe%20' + encodeURIComponent(email) + '%20to%20MonarchX%20Capital%20updates.';
-          note.textContent = "Opening your email — send to subscribe.";
-          note.style.color = 'var(--gold)';
-          btn.textContent = 'Subscribe ✓';
+          btn.disabled = true;
+          btn.textContent = 'Subscribing...';
+          fetch('/api/subscribe', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({email: email})
+          })
+          .then(function(r) { return r.json(); })
+          .then(function(data) {
+            if (data.success) {
+              note.textContent = "You're in. We'll be in touch.";
+              note.style.color = 'var(--gold)';
+              btn.textContent = 'Subscribed ✓';
+              document.getElementById('subscribeEmail').value = '';
+            } else {
+              throw new Error(data.error || 'failed');
+            }
+          })
+          .catch(function() {
+            note.textContent = "Something went wrong — try again or email charlotte@monarchxcapital.com";
+            btn.disabled = false;
+            btn.textContent = 'Subscribe';
+          });
         });
         </script>
 
