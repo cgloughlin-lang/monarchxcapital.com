@@ -1,0 +1,95 @@
+{
+  "last_updated": "2026-03-09",
+  "primary_keywords": [
+    {
+      "keyword": "fractional CGO",
+      "intent": "commercial",
+      "volume": "medium",
+      "competition": "medium",
+      "current_page": "/insights/fractional-cgo-growth-stage.html",
+      "ranking": null
+    },
+    {
+      "keyword": "PE portfolio turnaround consulting",
+      "intent": "commercial",
+      "volume": "low",
+      "competition": "low",
+      "current_page": "/insights/pe-portfolio-turnaround-consulting.html",
+      "ranking": null
+    },
+    {
+      "keyword": "embedded operator PE",
+      "intent": "informational",
+      "volume": "low",
+      "competition": "very low",
+      "current_page": null,
+      "ranking": null
+    },
+    {
+      "keyword": "commercial transformation consulting",
+      "intent": "commercial",
+      "volume": "medium",
+      "competition": "medium",
+      "current_page": "/insights/commercial-transformation-consulting-miami.html",
+      "ranking": null
+    },
+    {
+      "keyword": "GTM rebuild after leadership transition",
+      "intent": "informational",
+      "volume": "low",
+      "competition": "low",
+      "current_page": "/insights/gtm-rebuild-leadership-transition.html",
+      "ranking": null
+    },
+    {
+      "keyword": "marketing due diligence private equity",
+      "intent": "commercial",
+      "volume": "low",
+      "competition": "low",
+      "current_page": "/insights/marketing-due-diligence-private-equity.html",
+      "ranking": null
+    },
+    {
+      "keyword": "operational AI consulting",
+      "intent": "commercial",
+      "volume": "emerging",
+      "competition": "very low",
+      "current_page": null,
+      "ranking": null
+    },
+    {
+      "keyword": "fractional CRO growth stage",
+      "intent": "commercial",
+      "volume": "medium",
+      "competition": "medium",
+      "current_page": null,
+      "ranking": null
+    },
+    {
+      "keyword": "revenue architecture consulting",
+      "intent": "commercial",
+      "volume": "low",
+      "competition": "low",
+      "current_page": null,
+      "ranking": null
+    },
+    {
+      "keyword": "AI powered due diligence",
+      "intent": "informational",
+      "volume": "emerging",
+      "competition": "very low",
+      "current_page": null,
+      "ranking": null
+    }
+  ],
+  "geo_monitoring_queries": [
+    "best fractional CGO for PE portfolio companies",
+    "embedded operators for portfolio turnarounds",
+    "revenue architecture consulting PE",
+    "operational AI consulting",
+    "fractional CRO growth stage companies",
+    "commercial transformation consulting Miami",
+    "PE portfolio company revenue growth",
+    "what is an embedded operator"
+  ]
+}

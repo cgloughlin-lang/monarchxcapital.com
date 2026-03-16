@@ -1540,11 +1540,24 @@
       <div class="contact-form-area reveal reveal-d2">
         <span class="contact-form-label">Stay Informed</span>
         <p style="font-size:14px;color:var(--white-dim);margin-bottom:28px;line-height:1.7;">Occasional perspectives on commercial transformation, PE portfolio operations, and growth-stage execution — from people who've done it.</p>
-        <form class="subscribe-form" onsubmit="return false;">
-          <input type="email" class="subscribe-input" placeholder="your@email.com" aria-label="Email address">
-          <button type="submit" class="subscribe-btn">Subscribe</button>
+        <form class="subscribe-form" id="subscribeForm">
+          <input type="email" class="subscribe-input" id="subscribeEmail" placeholder="your@email.com" aria-label="Email address" required>
+          <button type="submit" class="subscribe-btn" id="subscribeBtn">Subscribe</button>
         </form>
-        <p class="subscribe-note">No noise. No cadence commitments. Unsubscribe anytime.</p>
+        <p class="subscribe-note" id="subscribeNote">No noise. No cadence commitments. Unsubscribe anytime.</p>
+        <script>
+        document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var email = document.getElementById('subscribeEmail').value;
+          if (!email) return;
+          var btn = document.getElementById('subscribeBtn');
+          var note = document.getElementById('subscribeNote');
+          window.location.href = 'mailto:charlotte@monarchxcapital.com?subject=Subscribe%20Request%20-%20MonarchX%20Capital&body=Please%20subscribe%20' + encodeURIComponent(email) + '%20to%20MonarchX%20Capital%20updates.';
+          note.textContent = "Opening your email — send to subscribe.";
+          note.style.color = 'var(--gold)';
+          btn.textContent = 'Subscribe ✓';
+        });
+        </script>
 
         <div style="margin-top:52px;padding-top:48px;border-top:1px solid var(--border);">
           <p style="font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Presence</p>

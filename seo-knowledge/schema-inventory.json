@@ -1,0 +1,40 @@
+{
+  "last_validated": "2026-03-09",
+  "pages": {
+    "/index.html": {
+      "schemas": ["Organization", "Person", "WebSite", "Service", "Service", "Service", "FAQPage"],
+      "valid": true,
+      "notes": "Enhanced 2026-03-09: Person schema expanded, 3 Service schemas added, FAQPage added"
+    },
+    "/insights/index.html": {
+      "schemas": ["CollectionPage"],
+      "valid": null,
+      "notes": "Needs BreadcrumbList added"
+    },
+    "/insights/commercial-transformation-consulting-miami.html": {
+      "schemas": ["Article", "BreadcrumbList"],
+      "valid": null,
+      "notes": "Needs validation"
+    },
+    "/insights/fractional-cgo-growth-stage.html": {
+      "schemas": ["Article", "BreadcrumbList"],
+      "valid": null,
+      "notes": "Needs validation"
+    },
+    "/insights/gtm-rebuild-leadership-transition.html": {
+      "schemas": ["Article", "BreadcrumbList"],
+      "valid": null,
+      "notes": "Needs validation"
+    },
+    "/insights/marketing-due-diligence-private-equity.html": {
+      "schemas": ["Article", "BreadcrumbList"],
+      "valid": null,
+      "notes": "Needs validation"
+    },
+    "/insights/pe-portfolio-turnaround-consulting.html": {
+      "schemas": ["Article", "BreadcrumbList"],
+      "valid": null,
+      "notes": "Needs validation"
+    }
+  }
+}
