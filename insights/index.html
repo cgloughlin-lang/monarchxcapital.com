@@ -154,16 +154,23 @@
   }
 
   /* Featured (first article) */
+  .insight-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 2px;
+  }
+
   .insight-featured-card {
     background: var(--charcoal-mid);
     padding: 56px 52px;
     border: 1px solid rgba(240,240,240,0.04);
+    grid-column: span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
     transition: background .3s;
-    margin-bottom: 2px;
   }
 
   .insight-featured-card:hover { background: rgba(28, 28, 38, 0.9); }
@@ -400,16 +407,16 @@
 <!-- INSIGHTS CONTENT -->
 <div class="insights-page">
 
-  <!-- Featured article (most recent) -->
+  <!-- Featured article (most recent: 2026-03-24) -->
   <a href="/insights/boards-operators.html" class="insight-featured-card reveal" style="display:grid;">
     <div>
       <div class="insight-featured-label">Leadership</div>
-      <h2>Boards Don&#x27;t Need More Data. They Need an Operator Who Answers the Question.</h2>
-      <p class="insight-featured-desc">Boards are drowning in data and starving for clarity. I&#x27;ve sat in board meetings where the management presentation was 60 slides of metrics — revenue waterfall, pipeline by stage, cohort…</p>
-      <p class="insight-featured-meta">March 2026 · 3 min</p>
+      <h2>Boards Don't Need More Data. They Need an Operator Who Answers the Question.</h2>
+      <p class="insight-featured-desc">Board meetings drown in metrics while management avoids taking positions. The difference between reporting and operating at the board level sounds subtle — but it determines whether the meeting ends with a decision or an action item to gather more information.</p>
+      <p class="insight-featured-meta">March 2026 · 3 min read</p>
     </div>
     <div class="insight-featured-right">
-      <p style="font-size:15px;color:var(--white-dim);line-height:1.75;">Boards are drowning in data and starving for clarity. I&#x27;ve sat in board meetings where the management presentation was 60 slides of metrics — revenue waterfall, pipeline by stage, cohort…</p>
+      <p style="font-size:15px;color:var(--white-dim);line-height:1.75;">The best operators walk into board meetings with a verdict, not a dashboard. Taking a position is the job. The data is just the evidence.</p>
       <span class="read-link">
         Read Article
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -417,67 +424,85 @@
     </div>
   </a>
 
-  <!-- Article grid -->
-  <div class="insights-grid">
-    <a href="/insights/latam.html" class="insight-card reveal">
+  <!-- Row 1: March 2026 articles -->
+  <div class="insights-grid" style="margin-top:2px;">
+    <a href="/insights/latam-expansion.html" class="insight-card reveal">
       <p class="insight-tag">Growth-Stage</p>
       <h3>The LATAM Opportunity Most US Companies Are Botching</h3>
-      <p class="insight-excerpt">The commercial case for LATAM expansion has been obvious for a decade. Combined middle-class growth, accelerating digital adoption, underpenetrated enterprise software markets, and — particularly in Mexico since the nearshoring…</p>
-      <p class="insight-meta">March 2026 · 6 min</p>
+      <p class="insight-excerpt">LATAM expansion fails not because the market isn't ready — it fails because US companies bring the wrong operating model and refuse to adapt it.</p>
+      <p class="insight-meta">March 2026 · 6 min read</p>
     </a>
     <a href="/insights/cac-lying.html" class="insight-card reveal reveal-d1">
       <p class="insight-tag">Growth-Stage</p>
       <h3>Why Your CAC Is Lying to You</h3>
-      <p class="insight-excerpt">CAC is the most quoted and least trusted metric in PE-backed companies. Everyone reports it. Almost no one calculates it the same way. Here&#x27;s the most common version of the…</p>
-      <p class="insight-meta">March 2026 · 3 min</p>
+      <p class="insight-excerpt">CAC as a single blended number is a fiction that hides which channels work and which are subsidizing failure. Here's how operators disaggregate it.</p>
+      <p class="insight-meta">March 2026 · 3 min read</p>
     </a>
     <a href="/insights/ai-makes-money.html" class="insight-card reveal reveal-d2">
       <p class="insight-tag">AI</p>
       <h3>AI That Actually Makes Money: 3 Patterns from the Field</h3>
-      <p class="insight-excerpt">There are two AI conversations happening simultaneously in the market right now and they almost never intersect. The first is the one at conferences and in the business press —…</p>
-      <p class="insight-meta">March 2026 · 7 min</p>
+      <p class="insight-excerpt">The AI deployments generating real revenue share one trait: they sit inside the commercial motion, not adjacent to it. Three patterns from the field.</p>
+      <p class="insight-meta">March 2026 · 7 min read</p>
     </a>
-    <a href="/insights/pe-portfolio-turnaround-consulting.html" class="insight-card reveal reveal-d3">
+  </div>
+
+  <!-- Row 2: Feb 2026 articles -->
+  <div class="insights-grid" style="margin-top:2px;">
+    <a href="/insights/pe-portfolio-turnaround-consulting.html" class="insight-card reveal">
       <p class="insight-tag">Private Equity</p>
       <h3>How Embedded Operators Drive PE Portfolio Turnarounds</h3>
       <p class="insight-excerpt">Why traditional consulting fails in turnaround situations and how embedded operators deliver velocity, accountability, and measurable results inside portfolio companies.</p>
       <p class="insight-meta">February 2026 · 9 min read</p>
     </a>
-    <a href="/insights/cdo-dead.html" class="insight-card reveal">
+    <a href="/insights/cdo-dead.html" class="insight-card reveal reveal-d1">
       <p class="insight-tag">Enterprise</p>
-      <h3>The CDO Role Is Dead. Here&#x27;s What Replaced It.</h3>
-      <p class="insight-excerpt">The Chief Digital Officer role peaked around 2018. By 2022, the more self-aware enterprises had already stopped creating new ones. By now, in early 2026, the role has quietly collapsed…</p>
-      <p class="insight-meta">February 2026 · 5 min</p>
+      <h3>The CDO Role Is Dead. Here's What Replaced It.</h3>
+      <p class="insight-excerpt">Chief Digital Officer was a title companies created to avoid changing anything material. What enterprises actually need now is a commercially literate transformation leader.</p>
+      <p class="insight-meta">February 2026 · 5 min read</p>
     </a>
-    <a href="/insights/commercial-transformation-consulting-miami.html" class="insight-card reveal reveal-d1">
+    <a href="/insights/commercial-transformation-consulting-miami.html" class="insight-card reveal reveal-d2">
       <p class="insight-tag">Enterprise · Miami</p>
-      <h3>Commercial Transformation Consulting in Miami: An Operator&#x27;s Approach</h3>
-      <p class="insight-excerpt">Miami&#x27;s emergence as a commercial hub — at the intersection of US enterprise and Latin America — demands a different kind of advisor. One who operates, not just advises.</p>
+      <h3>Commercial Transformation Consulting in Miami: An Operator's Approach</h3>
+      <p class="insight-excerpt">Miami's emergence as a commercial hub demands a different kind of advisor. One who operates, not just advises. How embedded operators drive transformation in South Florida.</p>
       <p class="insight-meta">February 2026 · 9 min read</p>
     </a>
-    <a href="/insights/fractional-cgo-growth-stage.html" class="insight-card reveal reveal-d2">
-      <p class="insight-tag">Growth-Stage · Leadership</p>
-      <h3>Why Growth-Stage Companies Need a Fractional Chief Growth Officer</h3>
-      <p class="insight-excerpt">The case for fractional CGO leadership at growth-stage companies. When the founder&#x27;s commercial instincts are no longer enough — and a full-time hire would fail.</p>
-      <p class="insight-meta">February 2026 · 6 min read</p>
-    </a>
-    <a href="/insights/commercial-diligence.html" class="insight-card reveal reveal-d3">
+  </div>
+
+  <!-- Row 3: Feb/Jan 2026 articles -->
+  <div class="insights-grid" style="margin-top:2px;">
+    <a href="/insights/commercial-diligence.html" class="insight-card reveal">
       <p class="insight-tag">PE</p>
       <h3>Commercial Due Diligence in 12 Days: How Operators Beat Consultants</h3>
-      <p class="insight-excerpt">The standard commercial due diligence process is broken, and most of the PE market knows it. Eight weeks. Hundreds of thousands in consulting fees. A slide deck that confirms the…</p>
-      <p class="insight-meta">February 2026 · 8 min</p>
+      <p class="insight-excerpt">Traditional commercial diligence takes 6-8 weeks and tells you what the company wants you to believe. Operator diligence takes 12 days and tells you what's actually true.</p>
+      <p class="insight-meta">February 2026 · 8 min read</p>
     </a>
-    <a href="/insights/management-evaluation.html" class="insight-card reveal">
+    <a href="/insights/fractional-cgo-growth-stage.html" class="insight-card reveal reveal-d1">
+      <p class="insight-tag">Growth-Stage · Leadership</p>
+      <h3>Why Growth-Stage Companies Need a Fractional Chief Growth Officer</h3>
+      <p class="insight-excerpt">The case for fractional CGO leadership at growth-stage companies. When the founder's commercial instincts are no longer enough — and a full-time hire would fail.</p>
+      <p class="insight-meta">January 2026 · 6 min read</p>
+    </a>
+    <a href="/insights/management-evaluation.html" class="insight-card reveal reveal-d2">
       <p class="insight-tag">Leadership</p>
-      <h3>What I Tell PE Partners When They Ask &#x27;Is the Management Team the Problem?&#x27;</h3>
-      <p class="insight-excerpt">I get this question in some form on almost every engagement. Usually in the first two weeks, usually in a call that starts with &quot;just wanted to get your early…</p>
-      <p class="insight-meta">January 2026 · 6 min</p>
+      <h3>What I Tell PE Partners When They Ask 'Is the Management Team the Problem?'</h3>
+      <p class="insight-excerpt">The question is usually wrong. The more useful question: what system is this team operating in, and is the system set up to let them succeed?</p>
+      <p class="insight-meta">January 2026 · 6 min read</p>
     </a>
-    <a href="/insights/gtm-rebuild-leadership-transition.html" class="insight-card reveal reveal-d1">
+  </div>
+
+  <!-- Row 4: Jan 2026 / Dec 2025 articles -->
+  <div class="insights-grid" style="margin-top:2px;">
+    <a href="/insights/gtm-rebuild-leadership-transition.html" class="insight-card reveal">
       <p class="insight-tag">GTM · Leadership Transition</p>
       <h3>How to Rebuild Your Go-to-Market After a Leadership Transition</h3>
       <p class="insight-excerpt">A five-phase framework for rebuilding GTM after a CRO departure or commercial leadership change — in 60–90 days, with measurable momentum.</p>
       <p class="insight-meta">January 2026 · 8 min read</p>
+    </a>
+    <a href="/insights/revenue-per-center.html" class="insight-card reveal reveal-d1">
+      <p class="insight-tag">PE</p>
+      <h3>The Revenue Per Center Problem Nobody Talks About</h3>
+      <p class="insight-excerpt">Same-store revenue decline masked by total revenue growth is the most common valuation trap in multi-site PE portfolios. Here's how to find it.</p>
+      <p class="insight-meta">January 2026 · 7 min read</p>
     </a>
     <a href="/insights/marketing-due-diligence-private-equity.html" class="insight-card reveal reveal-d2">
       <p class="insight-tag">Due Diligence · PE</p>
@@ -485,23 +510,21 @@
       <p class="insight-excerpt">The six dimensions of operator-grade marketing diligence that financial analysts routinely miss — and why it regularly costs PE sponsors millions post-close.</p>
       <p class="insight-meta">January 2026 · 10 min read</p>
     </a>
-    <a href="/insights/revenue-per-center.html" class="insight-card reveal reveal-d3">
-      <p class="insight-tag">PE</p>
-      <h3>The Revenue Per Center Problem Nobody Talks About</h3>
-      <p class="insight-excerpt">There&#x27;s a specific kind of company that makes PE investors very nervous when you look closely enough — and very comfortable when you don&#x27;t. It grows total revenue every year.…</p>
-      <p class="insight-meta">January 2026 · 7 min</p>
-    </a>
+  </div>
+
+  <!-- Row 5: Dec 2025 articles -->
+  <div class="insights-grid" style="margin-top:2px;">
     <a href="/insights/ai-pl.html" class="insight-card reveal">
       <p class="insight-tag">AI</p>
-      <h3>Why Your AI Investment Isn&#x27;t on the P&amp;L Yet</h3>
-      <p class="insight-excerpt">It&#x27;s December 2025. You&#x27;ve been spending on AI for at least 18 months. You have a Chief AI Officer, or a Head of AI, or a &quot;Center of Excellence&quot; with…</p>
-      <p class="insight-meta">December 2025 · 3 min</p>
+      <h3>Why Your AI Investment Isn't on the P&L Yet</h3>
+      <p class="insight-excerpt">Most companies have AI in the cost center and results in the hope column. AI without commercial ownership is a science project with a budget.</p>
+      <p class="insight-meta">December 2025 · 3 min read</p>
     </a>
     <a href="/insights/first-90-days.html" class="insight-card reveal reveal-d1">
       <p class="insight-tag">PE</p>
       <h3>The First 90 Days Inside a Broken Revenue Engine</h3>
-      <p class="insight-excerpt">When I walk into a company with declining revenue, everyone has already decided what the problem is. The CEO thinks it&#x27;s the market. The board thinks it&#x27;s the VP of…</p>
-      <p class="insight-meta">December 2025 · 9 min</p>
+      <p class="insight-excerpt">Most revenue problems aren't sales problems — they're sequencing problems disguised as sales problems. Here's what an operator actually does in the first 90 days.</p>
+      <p class="insight-meta">December 2025 · 9 min read</p>
     </a>
   </div>
 

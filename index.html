@@ -1012,6 +1012,94 @@
     display: block;
   }
 
+  /* Contact Form */
+  .contact-form { display: flex; flex-direction: column; gap: 14px; }
+  .contact-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .contact-input, .contact-textarea {
+    background: var(--charcoal-mid);
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .contact-input::placeholder, .contact-textarea::placeholder { color: var(--white-faint); }
+  .contact-input:focus, .contact-textarea:focus { border-color: var(--gold); }
+  .contact-textarea { resize: vertical; min-height: 100px; }
+  .contact-submit-btn {
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 16px 32px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+  .contact-submit-btn:hover { background: var(--gold-light); }
+  .contact-success-msg {
+    display: none;
+    font-size: 14px;
+    color: var(--gold);
+    padding: 14px 0;
+    letter-spacing: 0.03em;
+  }
+
+  /* Calendly section */
+  .calendly-section {
+    margin-top: 44px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+  .calendly-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+  .calendly-widget-wrap {
+    background: var(--charcoal-mid);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    min-height: 580px;
+  }
+  .calendly-widget-wrap .calendly-inline-widget {
+    min-width: 100%;
+    height: 580px;
+  }
+
+  /* Email link + copy icon */
+  .email-link-wrap { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+  .email-copy-icon {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--white-faint);
+    transition: color 0.2s;
+    padding: 2px 4px;
+    flex-shrink: 0;
+  }
+  .email-copy-icon:hover { color: var(--gold); }
+  .copy-tooltip {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    opacity: 0;
+    transition: opacity 0.3s;
+    margin-left: -6px;
+  }
+  .copy-tooltip.show { opacity: 1; }
+
   .subscribe-form {
     display: flex;
     gap: 0;
@@ -1195,6 +1283,8 @@
     .subscribe-form { flex-direction: column; }
     .subscribe-input { border-right: 1px solid var(--border); border-bottom: none; }
     .subscribe-btn { width: 100%; padding: 14px; }
+    .contact-form-row { grid-template-columns: 1fr; }
+    .contact-submit-btn { width: 100%; text-align: center; }
   }
 </style>
 </head>
@@ -1495,23 +1585,23 @@
       </a>
     </div>
     <div class="insights-grid">
-      <a href="/insights/pe-portfolio-turnaround-consulting.html" class="insight-card reveal">
-        <p class="insight-tag">PE Portfolio · Turnaround</p>
-        <h3>How Embedded Operators Drive PE Portfolio Turnarounds</h3>
-        <p class="insight-excerpt">Why traditional consulting fails in turnaround situations — and how embedded operators deliver velocity, accountability, and results inside PE-backed companies.</p>
-        <p class="insight-meta">February 2026 · 9 min read</p>
+      <a href="/insights/boards-operators.html" class="insight-card reveal">
+        <p class="insight-tag">Leadership</p>
+        <h3>Boards Don't Need More Data. They Need an Operator Who Answers the Question.</h3>
+        <p class="insight-excerpt">Board meetings drown in metrics while management avoids taking positions. The operator's job is to arrive with a verdict, not more data.</p>
+        <p class="insight-meta">March 2026 · 3 min read</p>
       </a>
-      <a href="/insights/marketing-due-diligence-private-equity.html" class="insight-card reveal reveal-d2">
-        <p class="insight-tag">PE · Due Diligence</p>
-        <h3>Marketing Due Diligence for Private Equity: What Consultants Miss</h3>
-        <p class="insight-excerpt">Most commercial due diligence misses what actually drives revenue. A framework for evaluating GTM quality, not just TAM size.</p>
-        <p class="insight-meta">February 2026 · 10 min read</p>
+      <a href="/insights/latam-expansion.html" class="insight-card reveal reveal-d2">
+        <p class="insight-tag">Growth-Stage</p>
+        <h3>The LATAM Opportunity Most US Companies Are Botching</h3>
+        <p class="insight-excerpt">LATAM expansion fails not because the market isn't ready — it fails because US companies bring the wrong operating model and refuse to adapt it.</p>
+        <p class="insight-meta">March 2026 · 6 min read</p>
       </a>
-      <a href="/insights/gtm-rebuild-leadership-transition.html" class="insight-card reveal reveal-d3">
-        <p class="insight-tag">GTM · Leadership Transition</p>
-        <h3>How to Rebuild Your Go-to-Market After a Leadership Transition</h3>
-        <p class="insight-excerpt">A practical framework for rebuilding GTM strategy after leadership change or stalled growth — and restoring commercial momentum.</p>
-        <p class="insight-meta">January 2026 · 8 min read</p>
+      <a href="/insights/cac-lying.html" class="insight-card reveal reveal-d3">
+        <p class="insight-tag">Growth-Stage</p>
+        <h3>Why Your CAC Is Lying to You</h3>
+        <p class="insight-excerpt">CAC as a single blended number is a fiction that hides which channels work and which are subsidizing failure. Here's how operators disaggregate it.</p>
+        <p class="insight-meta">March 2026 · 3 min read</p>
       </a>
     </div>
   </div>
@@ -1526,11 +1616,16 @@
         <h2 class="contact-headline reveal reveal-d1">Let's<br><em>Talk.</em></h2>
         <p class="contact-text reveal reveal-d2">We work with a select number of clients at any given time. If you're facing a commercial inflection point — a transformation, a turnaround, or a growth ceiling — we should talk.</p>
         <div class="contact-divider reveal reveal-d2"></div>
-        <a href="mailto:charlotte@monarchxcapital.com" class="contact-email-link reveal reveal-d3" id="emailLink" onclick="event.preventDefault();navigator.clipboard.writeText('charlotte@monarchxcapital.com').then(function(){document.getElementById('emailLink').innerHTML='<svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.2&quot;><rect x=&quot;2&quot; y=&quot;4&quot; width=&quot;16&quot; height=&quot;12&quot; rx=&quot;1&quot;/><path d=&quot;M2 7l8 5 8-5&quot;/></svg> Copied!';setTimeout(function(){document.getElementById('emailLink').innerHTML='<svg width=&quot;20&quot; height=&quot;20&quot; viewBox=&quot;0 0 20 20&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.2&quot;><rect x=&quot;2&quot; y=&quot;4&quot; width=&quot;16&quot; height=&quot;12&quot; rx=&quot;1&quot;/><path d=&quot;M2 7l8 5 8-5&quot;/></svg> charlotte@monarchxcapital.com'},2000)}).catch(function(){window.location.href='mailto:charlotte@monarchxcapital.com'})">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="4" width="16" height="12" rx="1"/><path d="M2 7l8 5 8-5"/></svg>
-          charlotte@monarchxcapital.com
-        </a>
-        <br><br>
+        <div class="email-link-wrap reveal reveal-d3">
+          <a href="mailto:charlotte@monarchxcapital.com" class="contact-email-link" id="emailLink">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="2" y="4" width="16" height="12" rx="1"/><path d="M2 7l8 5 8-5"/></svg>
+            charlotte@monarchxcapital.com
+          </a>
+          <span class="email-copy-icon" id="emailCopyBtn" title="Copy email address" aria-label="Copy email address">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          </span>
+          <span class="copy-tooltip" id="copyTooltip">Copied</span>
+        </div>
         <a href="https://www.linkedin.com/company/monarchx-capital" target="_blank" rel="noopener" class="contact-linkedin reveal reveal-d4">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           Connect on LinkedIn
@@ -1538,45 +1633,24 @@
       </div>
 
       <div class="contact-form-area reveal reveal-d2">
-        <span class="contact-form-label">Stay Informed</span>
-        <p style="font-size:14px;color:var(--white-dim);margin-bottom:28px;line-height:1.7;">Occasional perspectives on commercial transformation, PE portfolio operations, and growth-stage execution — from people who've done it.</p>
-        <form class="subscribe-form" id="subscribeForm">
-          <input type="email" class="subscribe-input" id="subscribeEmail" placeholder="your@email.com" aria-label="Email address" required>
-          <button type="submit" class="subscribe-btn" id="subscribeBtn">Subscribe</button>
+        <span class="contact-form-label">Start a Conversation</span>
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwzgkdl" method="POST">
+          <div class="contact-form-row">
+            <input type="text" class="contact-input" name="name" placeholder="Name" required>
+            <input type="email" class="contact-input" name="email" placeholder="Email" required>
+          </div>
+          <input type="text" class="contact-input" name="company" placeholder="Company">
+          <textarea class="contact-textarea" name="message" placeholder="What are you working on?" rows="4"></textarea>
+          <button type="submit" class="contact-submit-btn" id="contactSubmitBtn">Start a Conversation</button>
+          <p class="contact-success-msg" id="contactSuccess">Thank you. Charlotte will be in touch within 24 hours.</p>
         </form>
-        <p class="subscribe-note" id="subscribeNote">No noise. No cadence commitments. Unsubscribe anytime.</p>
-        <script>
-        document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-          e.preventDefault();
-          var email = document.getElementById('subscribeEmail').value;
-          if (!email) return;
-          var btn = document.getElementById('subscribeBtn');
-          var note = document.getElementById('subscribeNote');
-          btn.disabled = true;
-          btn.textContent = 'Subscribing...';
-          fetch('/api/subscribe', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({email: email})
-          })
-          .then(function(r) { return r.json(); })
-          .then(function(data) {
-            if (data.success) {
-              note.textContent = "You're in. We'll be in touch.";
-              note.style.color = 'var(--gold)';
-              btn.textContent = 'Subscribed ✓';
-              document.getElementById('subscribeEmail').value = '';
-            } else {
-              throw new Error(data.error || 'failed');
-            }
-          })
-          .catch(function() {
-            note.textContent = "Something went wrong — try again or email charlotte@monarchxcapital.com";
-            btn.disabled = false;
-            btn.textContent = 'Subscribe';
-          });
-        });
-        </script>
+
+        <div class="calendly-section">
+          <span class="calendly-label">Or book 15 minutes directly</span>
+          <div class="calendly-widget-wrap">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/christopherloughlin/30min?hide_gdpr_banner=1&background_color=111118&text_color=f0f0f0&primary_color=C9A962" style="min-width:100%;height:580px;"></div>
+          </div>
+        </div>
 
         <div style="margin-top:52px;padding-top:48px;border-top:1px solid var(--border);">
           <p style="font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Presence</p>
@@ -1679,7 +1753,55 @@
   }, { threshold: 0.5 });
 
   counterEls.forEach(el => counterObserver.observe(el));
+
+  // ===== CONTACT FORM =====
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('contactSubmitBtn');
+      var success = document.getElementById('contactSuccess');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(r) {
+        if (r.ok) {
+          contactForm.reset();
+          btn.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Start a Conversation';
+          success.textContent = 'Something went wrong — please email charlotte@monarchxcapital.com';
+          success.style.display = 'block';
+        }
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = 'Start a Conversation';
+        success.textContent = 'Something went wrong — please email charlotte@monarchxcapital.com';
+        success.style.display = 'block';
+      });
+    });
+  }
+
+  // ===== EMAIL COPY ICON =====
+  var emailCopyBtn = document.getElementById('emailCopyBtn');
+  if (emailCopyBtn) {
+    emailCopyBtn.addEventListener('click', function() {
+      navigator.clipboard.writeText('charlotte@monarchxcapital.com').then(function() {
+        var tooltip = document.getElementById('copyTooltip');
+        tooltip.classList.add('show');
+        setTimeout(function() { tooltip.classList.remove('show'); }, 2000);
+      });
+    });
+  }
 </script>
+
+<!-- Calendly widget script -->
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 </body>
 </html>

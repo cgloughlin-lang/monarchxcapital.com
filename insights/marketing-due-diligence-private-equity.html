@@ -360,6 +360,107 @@
 
   .related-list a:hover { color: var(--white); padding-left: 8px; }
   .related-list a:hover::after { opacity: 1; transform: translateX(4px); }
+
+  /* ===== ARTICLE CONTACT CTA ===== */
+  .article-contact-cta {
+    border-top: 2px solid var(--gold);
+    background: var(--charcoal);
+    padding: 52px 56px;
+    margin: 64px 0 0;
+  }
+  .article-contact-cta-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .article-cta-headline {
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .article-cta-headline em { font-style: italic; color: var(--gold); }
+  .article-cta-sub {
+    font-size: 14px;
+    color: var(--white-dim);
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+  /* Compact form */
+  .article-contact-form { display: flex; flex-direction: column; gap: 12px; }
+  .article-contact-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .article-contact-input, .article-contact-textarea {
+    background: var(--charcoal-mid);
+    border: 1px solid var(--border);
+    padding: 12px 16px;
+    color: var(--white);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .article-contact-input::placeholder, .article-contact-textarea::placeholder { color: var(--white-faint); }
+  .article-contact-input:focus, .article-contact-textarea:focus { border-color: var(--gold); }
+  .article-contact-textarea { resize: vertical; min-height: 72px; }
+  .article-contact-submit {
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 14px 28px;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+  .article-contact-submit:hover { background: var(--gold-light); }
+  .article-contact-success {
+    display: none;
+    font-size: 13px;
+    color: var(--gold);
+    padding: 10px 0;
+    letter-spacing: 0.03em;
+  }
+  /* Calendly column */
+  .article-calendly-col { display: flex; flex-direction: column; }
+  .article-calendly-label {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    display: block;
+  }
+  .article-calendly-widget {
+    background: var(--charcoal-mid);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    flex: 1;
+    min-height: 500px;
+  }
+  .article-calendly-widget .calendly-inline-widget {
+    min-width: 100%;
+    height: 500px;
+  }
+  /* Original article-cta kept for backward compat but hidden if new one present */
+  .article-contact-cta + .article-cta { display: none; }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .article-contact-cta { padding: 40px 28px; }
+    .article-contact-cta-inner { grid-template-columns: 1fr; gap: 40px; }
+    .article-contact-form-row { grid-template-columns: 1fr; }
+    .article-contact-submit { width: 100%; text-align: center; }
+  }
+
 </style>
 </head>
 <body>
@@ -493,5 +594,43 @@
   }, { threshold: 0.1 });
   revealEls.forEach(el => ro.observe(el));
 </script>
+<script>
+(function() {
+  var forms = document.querySelectorAll('.article-contact-form');
+  forms.forEach(function(form) {
+    var formId = form.id.replace('articleForm', '');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = document.getElementById('articleSubmit' + formId);
+      var success = document.getElementById('articleSuccess' + formId);
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(function(r) {
+        if (r.ok) {
+          form.reset();
+          btn.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Start a Conversation';
+          success.textContent = 'Something went wrong — please email charlotte@monarchxcapital.com';
+          success.style.display = 'block';
+        }
+      }).catch(function() {
+        btn.disabled = false;
+        btn.textContent = 'Start a Conversation';
+        success.textContent = 'Something went wrong — please email charlotte@monarchxcapital.com';
+        success.style.display = 'block';
+      });
+    });
+  });
+})();
+</script>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
 </body>
 </html>
